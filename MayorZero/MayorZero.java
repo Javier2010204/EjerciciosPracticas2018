@@ -12,3 +12,4 @@ public class MayorZero{
 		System.out.println(numero);
 	}
 }
+
