@@ -8,14 +8,13 @@ public class IntentosPassword2{
 		boolean acierto = false;
 		String password = "hola1234";
 
-		for (int i=0;i < INTENTOS;i++) {
+		for (int i=0;i < INTENTOS  && !acierto;i++) {
 			System.out.println("Ingrese el password.");
 			System.out.print(">");
 			String texto = scanner.next();
-			if(texto.equals(password) && !acierto){
+			if(texto.equals(password)){
 				System.out.println("Enhorabuena");
 				acierto = true;
-				i = 3;
 			}
 		}
 	}
