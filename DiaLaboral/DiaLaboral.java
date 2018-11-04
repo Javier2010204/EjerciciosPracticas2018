@@ -11,23 +11,13 @@ public class DiaLaboral{
 
 		switch(dia){
 			case "lunes": 
-				System.out.println("Dia laboral");
-				break;
 			case "martes":
-				System.out.println("Dia laboral");
-				break;
 			case "miercoles":
-				System.out.println("Dia laboral");
-				break;
 			case "jueves":
-				System.out.println("Dia laboral");
-				break;
 			case "viernes":
 				System.out.println("Dia laboral");
 				break;
 			case "sabado":
-				System.out.println("Dia libre");
-				break;
 			case "domingo":
 				System.out.println("Dia libre");
 				break;
