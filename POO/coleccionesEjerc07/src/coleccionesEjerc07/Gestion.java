@@ -39,9 +39,12 @@ public class Gestion {
 	 * @return	Devuelve un nuevo objeto alumno
 	 */
 	public Alumno anadirAlumno(){
-		System.out.println("Introduzca nombre");	String nom	= 	Leer.dato();
-		System.out.println("Introduzca apellidos");	String ape	=	Leer.dato();
-		System.out.println("Introduzca edad");		int edad	=	Leer.datoInt();
+		System.out.println("Introduzca nombre");	
+		String nom	= 	Leer.dato();
+		System.out.println("Introduzca apellidos");	
+		String ape	=	Leer.dato();
+		System.out.println("Introduzca edad");		
+		int edad	=	Leer.datoInt();
 		
 		Alumno alum = new Alumno(nom, ape, edad);
 		
@@ -125,3 +128,5 @@ public class Gestion {
 	
 	
 }
+
+System.out.println("Hola Mundo");
