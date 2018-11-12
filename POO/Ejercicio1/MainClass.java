@@ -60,6 +60,10 @@ public class MainClass{
 					System.out.print("Correo: ");
 					System.out.println(persona.getCorreo());
 				}
+			}else if(salir==3){
+				System.out.println("Editar");
+			}else if(salir == 4){
+				System.out.println("Eliminar");
 			}
 		}while(salir != 0);
 
