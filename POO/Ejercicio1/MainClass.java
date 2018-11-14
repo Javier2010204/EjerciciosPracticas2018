@@ -67,5 +67,7 @@ public class MainClass{
 			}
 		}while(salir != 0);
 
+		System.out.println("Hola mundo");
+
 	}
 }
