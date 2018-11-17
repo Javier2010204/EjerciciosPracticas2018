@@ -53,4 +53,65 @@ public class Persona{
 
         return letras[res];
     }
+
+    public void setNombre(String nombre){
+        this.nombre = nombre;
+    }
+
+    public void setEdad(int edad){
+        this.edad = edad;
+    }
+
+    public void setSexo(String sexo){
+        this.sexo = sexo;
+    }
+
+    public void setPeso(double peso){
+        this.peso = peso;
+    }
+
+    public void setAltura(double altura){
+        this.altura = altura;
+    }
+
+    public int calcularIMC(){
+        double pesoActual = peso / (Math.pow(altura, 2));
+
+        if(pesoActual >= 20 && pesoActual <= 25){
+            return PESO_IDEAL;
+        }else if(pesoActual < 20){
+            return INFRAPESO;
+        }else{
+            return SOBRE_PESO;
+        }
+    }
+
+    public boolean esMayorDeEdad(){
+        boolean mayor = false;
+        if(edad >= 18){
+            mayor = true;
+        }
+        return mayor;
+    }
+
+    @Override
+
+    public String toString(){
+        String sexo;
+        if(this.sexo == 'H'){
+            sexo = "hombre";
+        }else{
+            sexo = "mujer";
+        }
+
+        return "Informacion de la persona:\n"
+                + "Nombre: " + nombre + "\n"
+                + "Sexo: " + sexo + "\n"
+                + "Edad: " + edad + "\n"
+                + "DNI: " + DNI + "\n"
+                + "Peso: " + peso + "\n"
+                + "Altura: " + altura + "\n"
+    }
+
+
 }
