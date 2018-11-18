@@ -1,9 +1,9 @@
 public class Persona{
 
-    private final static char SEXO = 'H';
-    private final static int INFRAPESO = -1;
-    private final static int PESO_IDEAL = 0;
-    private final static int SOBRE_PESO = 1;
+    public final static char SEXO = 'H';
+    public final static int INFRAPESO = -1;
+    public final static int PESO_IDEAL = 0;
+    public final static int SOBRE_PESO = 1;
 
     private String nombre;
     private int edad;
@@ -62,7 +62,7 @@ public class Persona{
         this.edad = edad;
     }
 
-    public void setSexo(String sexo){
+    public void setSexo(char sexo){
         this.sexo = sexo;
     }
 
@@ -104,13 +104,13 @@ public class Persona{
             sexo = "mujer";
         }
 
-        return "Informacion de la persona:\n"
+        return "\nInformacion de la persona:\n"
                 + "Nombre: " + nombre + "\n"
                 + "Sexo: " + sexo + "\n"
                 + "Edad: " + edad + "\n"
                 + "DNI: " + DNI + "\n"
                 + "Peso: " + peso + "\n"
-                + "Altura: " + altura + "\n"
+                + "Altura: " + altura + "\n";
     }
 
 
