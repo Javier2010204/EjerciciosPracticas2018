@@ -5,22 +5,18 @@ public class Password{
     private String contrasenia;
 
     public Password(){
-
+        this(LONG);
     }
 
     public Password(int longitud){
-
+        this.longitud = longitud;
+        contrasenia = generarPassword();
     }
 
-    esFuerte(String contrasenia){
-        //2 mayusculas 2minusculas y 5 numeros
-        
-    }
-
-    generarPassword(){
+    public String generarPassword(){
         String password = "";
 
-        for(int i=0;i = 0; i++){
+        for(int i=0;i<longitud; i++){
             int eleccion = ((int)Math.floor(Math.random()*3+1));
 
             if(eleccion==1){
@@ -37,6 +33,30 @@ public class Password{
             }
         }
         return password;
+    }
+
+    public boolean esFuerte(){
+        //2 mayusculas 2minusculas y 5 numeros
+        int cuentaNumeros = 0;
+        int cuentaMayusculas = 0;
+        int cuentaMinusculas = 0;
+
+        // busca el tipo de caracter segun la tabla ASCII
+        for(int i=0; i<contrasenia.length(); i++){
+            if(contrasenia.charAt(i)>=97 && contrasenia.charAt(i)<=122){
+                cuentaMinusculas += 1;
+            }else if(contrasenia.charAt(i)>=65 && contrasenia.charAt(i)<=90){
+                cuentaMayusculas += 1;
+            }else{
+                cuentaNumeros += 1;
+            }
+        }
+        //verificacion para saber si la contraseña es fuerte o no
+        if(cuentaNumeros>=5 && cuentaMayusculas >= 2 && cuentaMinusculas >= 1){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     public void setLongitud(int longitud){
